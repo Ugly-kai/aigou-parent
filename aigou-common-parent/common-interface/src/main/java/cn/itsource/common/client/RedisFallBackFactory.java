@@ -1,4 +1,4 @@
-package client;
+package cn.itsource.common.client;
 
 import cn.itsource.basic.util.AjaxResult;
 import feign.hystrix.FallbackFactory;

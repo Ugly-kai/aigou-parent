@@ -1,6 +1,6 @@
 package cn.itsource.commom.controller;
 
-import client.RedisClient;
+import cn.itsource.common.client.RedisClient;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.RedisUtils;
 import org.springframework.web.bind.annotation.GetMapping;

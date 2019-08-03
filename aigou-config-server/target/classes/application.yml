@@ -13,7 +13,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Ugly-kai/aigou-config.git
+          uri: https://github.com/Ugly-kai/aigou-config2.git
           username: 228441046@qq.com
           password: ZHANGKAIYUN251521
 

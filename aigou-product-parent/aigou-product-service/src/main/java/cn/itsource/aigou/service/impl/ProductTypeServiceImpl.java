@@ -1,7 +1,7 @@
 package cn.itsource.aigou.service.impl;
 
-import client.RedisClient;
-import client.StaticPageClient;
+import cn.itsource.common.client.RedisClient;
+import cn.itsource.common.client.StaticPageClient;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.mapper.ProductTypeMapper;
 import cn.itsource.aigou.service.IProductTypeService;
@@ -110,7 +110,12 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
                 list.add(productType);
             }else{
                 ProductType parent = map.get(productType.getPid());
-                parent.getChildren().add(productType);
+                List<ProductType> children = parent.getChildren();
+                if(children==null){
+                    children = new ArrayList<>();
+                }
+                children.add(productType);
+                parent.setChildren(children);
             }
         }
         return list;
