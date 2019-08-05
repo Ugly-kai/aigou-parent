@@ -1,12 +1,10 @@
 package cn.itsource.aigou.controller;
 
-import cn.itsource.aigou.service.IProductService;
 import cn.itsource.aigou.domain.Product;
 import cn.itsource.aigou.query.ProductQuery;
+import cn.itsource.aigou.service.IProductService;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -82,7 +80,6 @@ public class ProductController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<Product> json(@RequestBody ProductQuery query)
     {
-        IPage<Product> page = productService.page(new Page<Product>(query.getPageNum(),query.getPageSize()));
-        return new PageList<>(page.getTotal(),page.getRecords());
+        return productService.queryPage(query);
     }
 }

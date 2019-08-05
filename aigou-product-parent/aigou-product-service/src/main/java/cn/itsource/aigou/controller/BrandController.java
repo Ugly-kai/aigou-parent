@@ -1,13 +1,11 @@
 package cn.itsource.aigou.controller;
 
-import cn.itsource.aigou.service.IBrandService;
 import cn.itsource.aigou.domain.Brand;
 import cn.itsource.aigou.query.BrandQuery;
+import cn.itsource.aigou.service.IBrandService;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.LetterUtil;
 import cn.itsource.basic.util.PageList;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

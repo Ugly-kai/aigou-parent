@@ -1,8 +1,8 @@
 package cn.itsource.aigou.controller;
 
-import cn.itsource.aigou.service.IProductTypeService;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.query.ProductTypeQuery;
+import cn.itsource.aigou.service.IProductTypeService;
 import cn.itsource.basic.util.AjaxResult;
 import cn.itsource.basic.util.PageList;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -100,4 +100,6 @@ public class ProductTypeController {
             return AjaxResult.me().setSuccess(false).setMessage("失败！"+e.getMessage());
         }
     }
+
+
 }

@@ -1,11 +1,11 @@
 package cn.itsource.aigou.service.impl;
 
-import cn.itsource.common.client.RedisClient;
-import cn.itsource.common.client.StaticPageClient;
 import cn.itsource.aigou.domain.ProductType;
 import cn.itsource.aigou.mapper.ProductTypeMapper;
 import cn.itsource.aigou.service.IProductTypeService;
 import cn.itsource.basic.util.AjaxResult;
+import cn.itsource.common.client.RedisClient;
+import cn.itsource.common.client.StaticPageClient;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
